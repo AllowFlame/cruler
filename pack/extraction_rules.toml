@@ -1,0 +1,12 @@
+[[extraction]]
+name = "gaus_electronics_sample"
+links = [
+    "http://comic.naver.com/webtoon/detail.nhn?titleId=675554&no=334&weekday=fri",
+    "http://comic.naver.com/webtoon/detail.nhn?titleId=675554&no=335&weekday=fri",
+    "http://comic.naver.com/webtoon/detail.nhn?titleId=675554&no=336&weekday=fri"
+]
+local_path = "/home/rust/cruler/out/"
+parts = ["<!-- 뷰어  -->(?P<part>[^!]*)<!-- //뷰어 -->"]
+extract = '<img[ \t\r\n\v\f]*src=["](?P<store>[0-9a-zA-Z:/\._\?=&]*)["]'
+    [extraction.procedure]
+    post_procedure = 'naver-webtoon'

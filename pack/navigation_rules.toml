@@ -1,0 +1,11 @@
+[[navigation]]
+name = "gaus_electronics_sample"
+entry = "http://comic.naver.com/webtoon/list.nhn?titleId=675554&weekday=fri"
+parts = ["<!-- 리스트 -->(?P<part>[^@]*)<!-- //리스트 -->"]
+extract = '<td>[ \t\r\n\v\f]*<a href="(?P<collect>[0-9a-zA-Z:/\._\?=&]*)" onclick'
+    [navigation.procedure]
+    post_procedure = 'naver-webtoon'
+    [navigation.pager]
+    parts = ['<div class="paginate">(?P<part>[^!]*)</div>']
+    extract = '<a href="(?P<link>[0-9a-zA-Z:/\._\?=&;]*)" class="(?P<type>[a-z]*)"'
+    pager = 'naver-webtoon'

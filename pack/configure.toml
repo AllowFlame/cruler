@@ -1,0 +1,6 @@
+[navigator]
+
+[extractor]
+connection_pool_size = 20
+
+[result]

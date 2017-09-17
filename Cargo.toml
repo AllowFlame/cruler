@@ -1,0 +1,22 @@
+[package]
+name = "cruler"
+version = "0.1.0"
+authors = ["AllowFlame <closelogin@hanmail.net>"]
+
+[dependencies]
+threadpool = "1.3.2"
+futures = "0.1"
+hyper = "0.11.2"
+hyper-tls = "0.1.2"
+tokio-core = "0.1"
+lazy_static = "0.2.8"
+regex = "0.2"
+serde = "1.0.2"
+serde_derive = "1.0.2"
+toml = "0.4"
+log = "0.3"
+env_logger = "0.4"
+libc = "0.2.0"
+
+[lib]
+crate-type = ["dylib"]
